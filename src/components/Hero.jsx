@@ -1,6 +1,7 @@
 "use client"
 
 import { useLanguage } from "../contexts/LanguageContext"
+import profileImage from "/YATEDENE.png"
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -27,7 +28,7 @@ export default function Hero() {
             <div className="absolute inset-0 bg-gradient-to-br from-primary/20 to-accent/20 rounded-full blur-2xl animate-pulse"></div>
             <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-spin-slow"></div>
             <img
-              src="/YATEDENE.png"
+              src={profileImage}
               alt="Yaye Tedene Faye"
               className="relative rounded-full w-48 h-48 mx-auto shadow-2xl border-4 border-primary/30 hover:scale-105 transition-all duration-500 hover:shadow-primary/30 object-cover"
             />
