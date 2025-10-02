@@ -1,4 +1,5 @@
 import { LanguageProvider } from "./contexts/LanguageContext"
+import { ThemeProvider } from "./components/ThemeProvider"
 import Navigation from "./components/Navigation"
 import Hero from "./components/Hero"
 import About from "./components/About"
@@ -9,19 +10,26 @@ import ChatBox from "./components/ChatBox"
 
 function App() {
   return (
-    <LanguageProvider>
-      <div className="min-h-screen bg-background">
-        <Navigation />
-        <main>
-          <Hero />
-          <About />
-          <Projects />
-          <Skills />
-          <Contact />
-        </main>
-        <ChatBox />
-      </div>
-    </LanguageProvider>
+    <ThemeProvider
+      attribute="class"
+      defaultTheme="light"
+      enableSystem
+      disableTransitionOnChange={false}
+    >
+      <LanguageProvider>
+        <div className="min-h-screen bg-background">
+          <Navigation />
+          <main>
+            <Hero />
+            <About />
+            <Projects />
+            <Skills />
+            <Contact />
+          </main>
+          <ChatBox />
+        </div>
+      </LanguageProvider>
+    </ThemeProvider>
   )
 }
 
