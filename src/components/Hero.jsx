@@ -2,7 +2,7 @@
 
 import { useLanguage } from "../contexts/LanguageContext"
 
-const profileImage = '/YATEDENE.png'
+const profileImage = `${import.meta.env.BASE_URL || ''}/YATEDENE.png`
 
 export default function Hero() {
   const { t } = useLanguage()
