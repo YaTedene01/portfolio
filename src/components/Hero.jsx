@@ -2,7 +2,7 @@
 
 import { useLanguage } from "../contexts/LanguageContext"
 
-const profileImage = new URL('/YATEDENE.png', import.meta.url).href
+const profileImage = '/YATEDENE.png'
 
 export default function Hero() {
   const { t } = useLanguage()
@@ -30,7 +30,7 @@ export default function Hero() {
             <div className="absolute inset-0 border-2 border-primary/30 rounded-full animate-spin-slow"></div>
             <img
               src={profileImage}
-              alt="Yaye Tedene Faye"
+              alt="Ya Tedene Faye"
               className="relative rounded-full w-48 h-48 mx-auto shadow-2xl border-4 border-primary/30 hover:scale-105 transition-all duration-500 hover:shadow-primary/30 object-cover"
             />
           </div>

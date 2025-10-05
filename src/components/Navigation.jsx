@@ -4,9 +4,20 @@ import { useState, useEffect } from "react"
 import { useTheme } from "next-themes"
 import { useLanguage } from "../contexts/LanguageContext"
 
+const downloadCV = (language) => {
+  const fileName = language === 'fr' ? 'CV_Francais.html' : 'CV_English.html'
+  const link = document.createElement('a')
+  link.href = `/${fileName}`
+  link.download = fileName
+  document.body.appendChild(link)
+  link.click()
+  document.body.removeChild(link)
+}
+
 export default function Navigation() {
   const [isScrolled, setIsScrolled] = useState(false)
   const [isMenuOpen, setIsMenuOpen] = useState(false)
+  const [isCVDropdownOpen, setIsCVDropdownOpen] = useState(false)
   const { theme, setTheme } = useTheme()
   const { language, toggleLanguage, t } = useLanguage()
 
@@ -18,9 +29,16 @@ export default function Navigation() {
     return () => window.removeEventListener("scroll", handleScroll)
   }, [])
 
-  const handleDownloadCV = () => {
-    window.print()
-  }
+  useEffect(() => {
+    const handleClickOutside = (event) => {
+      if (isCVDropdownOpen && !event.target.closest('.cv-dropdown')) {
+        setIsCVDropdownOpen(false)
+      }
+    }
+    document.addEventListener('mousedown', handleClickOutside)
+    return () => document.removeEventListener('mousedown', handleClickOutside)
+  }, [isCVDropdownOpen])
+
 
   return (
     <nav
@@ -90,12 +108,39 @@ export default function Navigation() {
                 {language === "fr" ? "EN" : "FR"}
               </button>
 
-              <button
-                onClick={handleDownloadCV}
-                className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25"
-              >
-                {t.nav.downloadCV}
-              </button>
+              <div className="relative cv-dropdown">
+                <button
+                  onClick={() => setIsCVDropdownOpen(!isCVDropdownOpen)}
+                  className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-all duration-300 hover:shadow-lg hover:shadow-primary/25 flex items-center gap-2"
+                >
+                  {t.nav.downloadCV}
+                  <svg className={`w-4 h-4 transition-transform ${isCVDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                </button>
+                {isCVDropdownOpen && (
+                  <div className="absolute top-full mt-2 w-48 bg-card border border-border rounded-md shadow-lg z-50">
+                    <button
+                      onClick={() => {
+                        downloadCV('fr')
+                        setIsCVDropdownOpen(false)
+                      }}
+                      className="w-full px-4 py-2 text-left text-sm hover:bg-accent transition-colors first:rounded-t-md"
+                    >
+                      📄 CV Français
+                    </button>
+                    <button
+                      onClick={() => {
+                        downloadCV('en')
+                        setIsCVDropdownOpen(false)
+                      }}
+                      className="w-full px-4 py-2 text-left text-sm hover:bg-accent transition-colors last:rounded-b-md"
+                    >
+                      📄 CV English
+                    </button>
+                  </div>
+                )}
+              </div>
             </div>
           </div>
 
@@ -168,12 +213,39 @@ export default function Navigation() {
                   {language === "fr" ? "EN" : "FR"}
                 </button>
 
-                <button
-                  onClick={handleDownloadCV}
-                  className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-all duration-300"
-                >
-                  {t.nav.downloadCV}
-                </button>
+                <div className="relative cv-dropdown">
+                  <button
+                    onClick={() => setIsCVDropdownOpen(!isCVDropdownOpen)}
+                    className="px-4 py-2 bg-primary text-primary-foreground text-sm font-medium rounded-md hover:bg-primary/90 transition-all duration-300 flex items-center gap-2"
+                  >
+                    {t.nav.downloadCV}
+                    <svg className={`w-4 h-4 transition-transform ${isCVDropdownOpen ? 'rotate-180' : ''}`} fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                      <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                    </svg>
+                  </button>
+                  {isCVDropdownOpen && (
+                    <div className="absolute bottom-full mb-2 w-48 bg-card border border-border rounded-md shadow-lg z-50">
+                      <button
+                        onClick={() => {
+                          downloadCV('fr')
+                          setIsCVDropdownOpen(false)
+                        }}
+                        className="w-full px-4 py-2 text-left text-sm hover:bg-accent transition-colors first:rounded-t-md"
+                      >
+                        📄 CV Français
+                      </button>
+                      <button
+                        onClick={() => {
+                          downloadCV('en')
+                          setIsCVDropdownOpen(false)
+                        }}
+                        className="w-full px-4 py-2 text-left text-sm hover:bg-accent transition-colors last:rounded-b-md"
+                      >
+                        📄 CV English
+                      </button>
+                    </div>
+                  )}
+                </div>
               </div>
             </div>
           </div>

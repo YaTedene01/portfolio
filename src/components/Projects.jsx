@@ -4,24 +4,26 @@ const projects = [
     description:
       "Système complet de gestion multi-entreprises permettant la gestion des employés, cycles de paie, bulletins et paiements avec génération automatique de documents PDF.",
     tech: ["React", "Node.js", "Express", "MySQL"],
+    referent: "Aly Tall Niang | Tél : +221 77 182 54 14",
   },
   {
-    title: "MaxIt - Application de Gestion Logistique",
+    title: "MaxIt - Application de Transfert D'Argent",
     description:
-      "Plateforme complète incluant la gestion d'envoi/retrait, suivi de cargaisons, gestion des tâches et administration du personnel avec un tableau de bord analytique.",
-    tech: ["Laravel", "MySQL", "JavaScript", "API REST"],
+      "Plateforme complète incluant la gestion d'envoi/retrait et Achat avec woyofal",
+    tech: ["php", "PostgreSQL", "API REST"],
+    referent: "Birane Baila Wane | Tél : +221 77 766 95 95",
   },
   {
     title: "Application de Messagerie Instantanée",
     description:
       "Application de chat en temps réel avec envoi de messages, gestion des contacts et interface réactive inspirée de WhatsApp.",
-    tech: ["React", "Socket.io", "Node.js", "MongoDB"],
+    tech: ["javascript","PostgreSQL"],
   },
   {
     title: "Système de Gestion des Apprenants",
     description:
       "Outil de suivi pédagogique permettant de gérer la liste des étudiants, leurs présences et informations académiques dans un environnement intuitif.",
-    tech: ["PHP", "MySQL", "JavaScript"],
+    tech: ["PHP", "MySQL"],
   },
 ]
 
@@ -54,7 +56,12 @@ export default function Projects() {
                   {project.title}
                 </h3>
               </div>
-              <p className="text-muted-foreground leading-relaxed mb-8 text-lg">{project.description}</p>
+              <p className="text-muted-foreground leading-relaxed mb-4 text-lg">{project.description}</p>
+              {project.referent && (
+                <p className="text-sm text-muted-foreground mb-6 italic">
+                  <strong>Référent :</strong> {project.referent}
+                </p>
+              )}
               <div className="flex flex-wrap gap-3">
                 {project.tech.map((tech, techIndex) => (
                   <span
