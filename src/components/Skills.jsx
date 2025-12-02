@@ -7,7 +7,7 @@ const skillsData = {
   Méthodologie: ["Agile/Scrum"],
 }
 
-const softSkills = ["Autonomie", "Bonne communication", "Créativité", "Esprit d'initiative", "Capacité d'adaptation"]
+const softSkills = ["Autonomie", "Communication", "Créativité", "Initiative", "Adaptabilité"]
 
 export default function Skills() {
   return (

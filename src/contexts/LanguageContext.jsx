@@ -25,7 +25,7 @@ export const translations = {
       title: "About",
       profile: "Profile",
       profileText:
-        "Holder of a Bachelor's degree in Computer Science, Software Engineering option, I am a Full-Stack developer passionate about creating high-performance web and mobile applications. My expertise covers the entire development cycle, from design to production deployment. Rigorous and creative, I am committed to delivering quality technical solutions with an excellent user experience. Always on the lookout for the latest technologies, I am constantly seeking learning to improve my skills.",
+        "Holder of a Bachelor's degree in Software Engineering, I am a passionate Full-Stack Developer with a strong interest in building high-performance, scalable and intuitive applications. Curious, rigorous and creative, I develop end-to-end solutions: analysis, architecture, development, optimization and deployment.",
       education: "Education",
       educationDegree: "Bachelor's in Software Engineering",
       educationUniversity: "Iba Der Thiam University, Thiès",
@@ -89,7 +89,7 @@ export const translations = {
       title: "À propos",
       profile: "Profil",
       profileText:
-        "Titulaire d'une Licence en Informatique, option Génie Logiciel, je suis une développeuse Full-Stack passionnée par la création d'applications web et mobile performantes. Mon expertise couvre l'ensemble du cycle de développement, de la conception à la mise en production. Rigoureuse et créative, je m'attache à livrer des solutions techniques de qualité avec une excellente expérience utilisateur. Toujours à l'affût des dernières technologies, je suis constamment en quête d'apprentissage pour améliorer mes compétences.",
+        "Titulaire d'une Licence en Informatique (Génie Logiciel), je suis une développeuse Full-Stack passionnée par la conception d'applications performantes et intuitives. Curieuse, rigoureuse et créative, je conçois des solutions fiables de bout en bout : analyse, architecture, développement, optimisation et déploiement.",
       education: "Formation",
       educationDegree: "Licence en Génie Logiciel",
       educationUniversity: "Université Iba Der Thiam, Thiès",
