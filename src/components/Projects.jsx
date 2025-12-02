@@ -1,29 +1,59 @@
 const projects = [
   {
-    title: "Application de Gestion des Salaires",
+    title: "OMPAY — Application de Paiement et Transfert Mobile",
     description:
-      "Système complet de gestion multi-entreprises permettant la gestion des employés, cycles de paie, bulletins et paiements avec génération automatique de documents PDF.",
-    tech: ["React", "Node.js", "Express", "MySQL"],
-    referent: "Aly Tall Niang | Tél : +221 77 182 54 14",
+      "Plateforme de paiement mobile : envoi et réception d'argent, paiement via code marchand, OTP SMS. Documentation générée avec Swagger/OpenAPI.",
+    tech: ["Laravel", "PostgreSQL", "Laravel Passport", "OpenAPI"],
   },
   {
-    title: "MaxIt - Application de Transfert D'Argent",
+    title: "OMPAY CLI — Application Dart en Ligne de Commande",
     description:
-      "Plateforme complète incluant la gestion d'envoi/retrait et Achat avec woyofal",
-    tech: ["php", "PostgreSQL", "API REST"],
+      "Interface CLI permettant d'interagir avec l'API OMPAY : authentification, transfert, paiement.",
+    tech: ["Dart", "Dio", "GetIt", "DotEnv"],
+  },
+  {
+    title: "OMPAY Flutter — Application Mobile (Clone Orange Money)",
+    description:
+      "Application mobile permettant transferts, paiements, consultation solde, historique transactions. Reproduction des principales fonctionnalités Orange Money.",
+    tech: ["Flutter SDK 3.0+", "Dart SDK 2.19+"],
+  },
+  {
+    title: "Ges-Compte — API REST Banque",
+    description:
+      "Gestion comptes bancaires, clients, transactions + Swagger.",
+    tech: ["Laravel", "PostgreSQL", "OAuth2", "OpenAPI"],
+  },
+  {
+    title: "TODO — Gestion de Tâches",
+    description:
+      "Auth, partage, historique, multi-utilisateurs.",
+    tech: ["Node.js", "Express", "TypeScript", "Prisma"],
+  },
+  {
+    title: "FOTOLJAY — Marketplace Articles d'Occasion",
+    description:
+      "Achat/vente objets avec photo obligatoire.",
+    tech: ["Angular 17", "Tailwind", "Node.js", "Prisma"],
+  },
+  {
+    title: "MAXIT — Transfert d'Argent",
+    description:
+      "Transactions, Woyofal, microservices.",
+    tech: ["PHP", "PostgreSQL", "API REST"],
     referent: "Birane Baila Wane | Tél : +221 77 766 95 95",
   },
   {
-    title: "Application de Messagerie Instantanée",
+    title: "Whatsapp — Application de Messagerie",
     description:
-      "Application de chat en temps réel avec envoi de messages, gestion des contacts et interface réactive inspirée de WhatsApp.",
-    tech: ["javascript","PostgreSQL"],
+      "Chat temps réel WEB + interface responsive.",
+    tech: ["JavaScript", "PostgreSQL"],
   },
   {
-    title: "Système de Gestion des Apprenants",
+    title: "Gestion-Salaire — Application Paie Entreprises",
     description:
-      "Outil de suivi pédagogique permettant de gérer la liste des étudiants, leurs présences et informations académiques dans un environnement intuitif.",
-    tech: ["PHP", "MySQL"],
+      "Gestion paies, bulletins + PDF.",
+    tech: ["React", "Node.js", "Express", "PostgreSQL"],
+    referent: "Ali Tall Niang | Tél : +221 77 182 54 14",
   },
 ]
 

@@ -1,9 +1,9 @@
 const skillsData = {
-  Langages: ["JavaScript", "TypeScript", "PHP", "Java", "HTML/CSS", "C"],
-  Frameworks: ["React", "Next.js", "Node.js", "Express", "Laravel", "Flutter"],
-  "Bases de données": ["MySQL", "MongoDB", "PostgreSQL"],
+  Langages: ["JavaScript", "TypeScript", "PHP", "Java", "Dart", "HTML/CSS", "C"],
+  Frameworks: ["React", "Node.js", "Express", "Laravel", "Flutter"],
+  "Bases de données": ["MySQL", "PostgreSQL", "MongoDB"],
   Design: ["Figma", "UI/UX Design"],
-  Outils: ["Git/GitHub", "Docker"],
+  Outils: ["Git/GitHub", "Docker", "Jenkins"],
   Méthodologie: ["Agile/Scrum"],
 }
 
