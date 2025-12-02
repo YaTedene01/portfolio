@@ -7,8 +7,9 @@ import { useLanguage } from "../contexts/LanguageContext"
 const downloadCV = (language) => {
   const fileName = language === 'fr' ? 'ya-tedene-faye-cv.pdf' : 'ya-tedene-faye-cv-anglais.pdf'
   const link = document.createElement('a')
-  link.href = new URL(`../public/${fileName}`, import.meta.url).href
+  link.href = `/${fileName}`
   link.download = fileName
+  link.target = '_blank'
   document.body.appendChild(link)
   link.click()
   document.body.removeChild(link)

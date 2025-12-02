@@ -56,6 +56,7 @@ const projects = [
       "Chat temps réel WEB + interface responsive.",
     tech: ["JavaScript", "PostgreSQL"],
     github: "https://github.com/YaTedene01/Whatsapp.git",
+    demo: "https://projet-whatsapp-eight.vercel.app/",
   },
   {
     title: "Gestion-Salaire — Application Paie Entreprises",
