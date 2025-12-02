@@ -1,5 +1,3 @@
-"use client"
-
 import { useLanguage } from "../contexts/LanguageContext"
 
 const projects = [
@@ -7,9 +5,7 @@ const projects = [
     title: "OMPAY — Application de Paiement et Transfert Mobile",
     description:
       "Plateforme de paiement mobile : envoi et réception d'argent, paiement via code marchand, OTP SMS. Documentation générée avec Swagger/OpenAPI.",
-    tech: ["Laravel", "PostgreSQL", "Laravel Passport", "OpenAPI"],
-    github: "https://github.com/YaTedene01/ompay.git",
-    demo: "https://ompay-demo.com", // Assuming deployment
+    tech: ["Laravel", "PostgreSQL", "Laravel Passport", "OpenAPI"]
   },
   {
     title: "OMPAY CLI — Application Dart en Ligne de Commande",

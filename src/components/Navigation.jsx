@@ -5,9 +5,9 @@ import { useTheme } from "next-themes"
 import { useLanguage } from "../contexts/LanguageContext"
 
 const downloadCV = (language) => {
-  const fileName = language === 'fr' ? 'ya tedene faye cv.pdf' : 'ya tedene faye cv anglais.pdf'
+  const fileName = language === 'fr' ? 'ya-tedene-faye-cv.pdf' : 'ya-tedene-faye-cv-anglais.pdf'
   const link = document.createElement('a')
-  link.href = `/${encodeURIComponent(fileName)}`
+  link.href = `/${fileName}`
   link.download = fileName
   document.body.appendChild(link)
   link.click()
